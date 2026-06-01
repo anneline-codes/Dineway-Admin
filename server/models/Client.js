@@ -10,6 +10,6 @@ const clientSchema = new mongoose.Schema({
   bankAccount: { type: String, default: '' },
   sales: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now },
-}, { timestamps: true });
+});
 
 export default mongoose.model('Client', clientSchema);

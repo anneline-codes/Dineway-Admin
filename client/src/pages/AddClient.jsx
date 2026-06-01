@@ -11,6 +11,7 @@ const initialClient = {
   email: '',
   phone: '',
   bankAccount: '',
+  createdAt: '',
   sales: 0,
 };
 
@@ -67,7 +68,7 @@ export default function AddClient() {
         </label>
         <label>
           Date of creation
-          <input type="date" onChange={() => {}} />
+          <input value={client.createdAt} type="date" onChange={(event) => update('createdAt', event.target.value)} />
         </label>
         <label>
           Address
