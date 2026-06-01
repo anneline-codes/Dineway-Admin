@@ -6,6 +6,10 @@ export const getClients = async (req, res) => {
 };
 
 export const createClient = async (req, res) => {
-  const client = await Client.create(req.body);
+  const payload = {
+    ...req.body,
+    createdAt: req.body.createdAt ? new Date(req.body.createdAt) : undefined,
+  };
+  const client = await Client.create(payload);
   res.status(201).json({ client });
 };
