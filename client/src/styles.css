@@ -153,6 +153,13 @@ a {
   min-width: 0;
 }
 
+.landing-logo {
+  width: clamp(220px, 22vw, 300px);
+  height: auto;
+  margin: 0 0 clamp(20px, 3vh, 30px);
+  display: block;
+}
+
 .landing-copy .brand-logo {
   margin: 0 0 clamp(24px, 3.5vh, 36px);
   transform: scale(clamp(0.55, 6.2vw, 0.72));
@@ -285,24 +292,24 @@ a {
   overflow: hidden;
   display: grid;
   place-items: center;
-  padding: clamp(32px, 4vh, 60px);
+  padding: clamp(24px, 3vh, 40px);
 }
 
 .hero-plate {
   position: absolute;
-  width: clamp(600px, 65vw, 800px);
+  width: clamp(480px, 55vw, 680px);
   aspect-ratio: 1;
-  border: 3px solid #D4AF37;
+  border: 2.5px solid #D4AF37;
   border-radius: 50%;
   overflow: hidden;
   z-index: 4;
-  box-shadow: 0 0 60px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
   animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-10px); }
 }
 
 .hero-plate img,
@@ -319,61 +326,62 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: clamp(900px, 95vw, 1100px);
+  width: clamp(700px, 85vw, 950px);
   aspect-ratio: 1;
-  border: 1.5px dashed #D4AF37;
+  border: 1.2px dashed #D4AF37;
   border-radius: 50%;
-  opacity: 0.7;
+  opacity: 0.6;
   z-index: 1;
   transform: translate(-50%, -50%);
 }
 
 .small-dish {
   position: absolute;
-  width: clamp(120px, 14vw, 180px);
+  width: clamp(100px, 11vw, 150px);
   aspect-ratio: 1;
-  border: 3px solid #D4AF37;
+  border: 2px solid #D4AF37;
   border-radius: 50%;
   overflow: hidden;
   z-index: 3;
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
-  transition: transform 300ms ease;
+  box-shadow: 0 0 32px rgba(212, 175, 55, 0.16), inset 0 0 20px rgba(212, 175, 55, 0.1);
+  transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
 .small-dish:hover {
-  transform: scale(1.05) translateY(-4px);
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.25), inset 0 0 20px rgba(212, 175, 55, 0.15);
 }
 
 .small-dish::after {
   content: "";
   position: absolute;
-  right: -8px;
-  bottom: 16px;
-  width: 32px;
-  height: 32px;
+  right: -6px;
+  bottom: 13px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: #D4AF37;
-  opacity: 0.8;
+  opacity: 0.7;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
 }
 
 .small-dish-1 {
-  top: clamp(32px, 8vh, 100px);
+  top: clamp(18px, 8vh, 90px);
   left: 12%;
   animation: float 5s ease-in-out infinite;
   animation-delay: 0s;
 }
 
 .small-dish-2 {
-  top: 50%;
-  left: 4%;
-  transform: translateY(-50%);
+  top: clamp(35%, 45vh, 48%);
+  left: 5%;
   animation: float 5.5s ease-in-out infinite;
   animation-delay: 0.5s;
 }
 
 .small-dish-3 {
-  bottom: clamp(10%, 12vh, 18%);
-  left: 14%;
+  bottom: clamp(14%, 12vh, 22%);
+  left: 13%;
   animation: float 6s ease-in-out infinite;
   animation-delay: 1s;
 }
@@ -382,31 +390,31 @@ a {
   position: absolute;
   right: 0;
   bottom: -2%;
-  width: clamp(280px, 35vw, 420px);
-  height: clamp(280px, 35vw, 420px);
+  width: clamp(240px, 30vw, 360px);
+  height: clamp(240px, 30vw, 360px);
   border-radius: 50% 0 50% 50%;
   background: #D4AF37;
   z-index: 0;
-  opacity: 0.95;
+  opacity: 0.92;
 }
 
 .dot-grid {
   position: absolute;
-  width: clamp(60px, 5vw, 90px);
-  height: clamp(60px, 5vw, 90px);
-  background-image: radial-gradient(#D4AF37 1.5px, transparent 1.5px);
-  background-size: 12px 12px;
+  width: clamp(50px, 4.5vw, 80px);
+  height: clamp(50px, 4.5vw, 80px);
+  background-image: radial-gradient(#D4AF37 1.2px, transparent 1.2px);
+  background-size: 11px 11px;
   z-index: 2;
 }
 
 .dot-grid-one {
   top: 8%;
-  right: 8%;
+  right: 10%;
 }
 
 .dot-grid-two {
-  right: 3%;
-  bottom: 12%;
+  right: 2%;
+  bottom: 10%;
 }
 
 .login-page {
@@ -1341,33 +1349,77 @@ a {
   }
 
   .landing-copy {
-    padding: clamp(28px, 5vh, 48px) clamp(24px, 4vw, 40px);
+    padding: clamp(24px, 4vh, 40px) clamp(24px, 3.5vw, 36px);
     min-height: auto;
     justify-content: flex-start;
-    padding-top: clamp(28px, 8vh, 60px);
+    padding-top: clamp(24px, 7vh, 48px);
+  }
+
+  .landing-logo {
+    width: clamp(180px, 18vw, 240px);
+    margin: 0 0 clamp(16px, 2.5vh, 24px);
   }
 
   .landing-copy .brand-logo {
-    margin: 0 0 clamp(24px, 4vh, 36px);
-    transform: scale(clamp(0.56, 6vw, 0.72));
+    margin: 0 0 clamp(20px, 3vh, 28px);
+    transform: scale(clamp(0.48, 5vw, 0.62));
     transform-origin: top left;
   }
 
+  .welcome-rule {
+    gap: clamp(10px, 1.5vw, 20px);
+    font-size: clamp(11px, 0.75vw, 13px);
+    margin-bottom: clamp(18px, 3vh, 28px);
+  }
+
+  .landing-copy h1 {
+    font-size: clamp(40px, 4.2vw, 56px);
+    margin: 0 0 clamp(16px, 2.8vh, 24px);
+  }
+
+  .landing-text {
+    font-size: clamp(14px, 1vw, 16px);
+    margin: 0 0 clamp(18px, 3vh, 28px);
+    max-width: 100%;
+  }
+
+  .primary-cta,
+  .demo-cta {
+    height: clamp(48px, 4.8vh, 56px);
+    font-size: clamp(15px, 1.1vw, 18px);
+    width: clamp(160px, 16vw, 220px);
+  }
+
   .landing-art {
-    min-height: 450px;
-    padding: clamp(20px, 3vh, 32px);
+    min-height: 420px;
+    padding: clamp(16px, 2vh, 28px);
   }
 
   .hero-plate {
-    width: clamp(340px, 80vw, 420px);
+    width: clamp(360px, 70vw, 480px);
   }
 
   .orbit {
-    width: clamp(520px, 95vw, 620px);
+    width: clamp(520px, 90vw, 700px);
   }
 
   .small-dish {
-    width: clamp(80px, 12vw, 120px);
+    width: clamp(85px, 10vw, 120px);
+  }
+
+  .small-dish-1 {
+    top: clamp(16px, 6vh, 70px);
+    left: 12%;
+  }
+
+  .small-dish-2 {
+    top: 42%;
+    left: 5%;
+  }
+
+  .small-dish-3 {
+    bottom: clamp(12%, 10vh, 20%);
+    left: 13%;
   }
 
   .gold-moon {
