@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { User } from 'lucide-react';
+import { User } from 'lucide-react' ;
 import Sidebar from './Sidebar.jsx' ;
 
 export default function AdminLayout() {
