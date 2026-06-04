@@ -1,7 +1,7 @@
 import { CircleDollarSign, CupSoda, Sandwich, ShoppingCart } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
-import StateMessage from '../components/StateMessage.jsx';
-import api from '../services/api.js';
+import StateMessage from '../components/StateMessage.jsx' ;
+import api from '../services/api.js' ;
 
 const iconMap = {
   orders: ShoppingCart,
